@@ -1,0 +1,139 @@
+.about {
+  margin: 0.5rem;
+
+  &__navbar {
+    @include listTypeDecoration;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
+
+    @include responsive(phone) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    @include listTypeDecoration;
+    font-family: $font-secondary;
+    color: $color-secondary-dark-o;
+    margin: 0.3rem;
+
+    @include responsive(tab-port) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    color: $color-secondary-dark-o;
+    text-align: center;
+    font-size: 3rem;
+    font-family: $font-primary;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    @include responsive(tab-port) {
+      font-size: 2rem;
+      padding-top: 6rem;
+    }
+  }
+
+  &__heading:hover {
+    animation: myScale;
+    animation-duration: 3s;
+
+    @include responsive(tab-port) {
+      animation: none;
+    }
+  }
+
+  &__container {
+    margin: 3rem;
+    display: flex;
+    justify-content: first baseline;
+    position: relative;
+    display: block;
+    background-image: url(../img/about-bg.jpeg);
+    background-size: 100%;
+    object-fit: cover;
+  }
+
+  &__image {
+    border: 10px solid $color-secondary-dark-o;
+    border-radius: 2%;
+    height: 40%;
+    width: 40%;
+  }
+
+  &__paragraph {
+    border: 10px solid $color-primary-dark-green;
+    border-radius: 2%;
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    right: 45%;
+    bottom: 25%;
+    padding: 2rem;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 600;
+    height: 40%;
+    width: 40%;
+    overflow-x: hidden;
+    text-align: right;
+
+    @include responsive(desktop) {
+      height: 50%;
+      width: 50%;
+    }
+
+    @include responsive(tab-port) {
+      height: 35%;
+      width: 35%;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      right: 45%;
+      bottom: 25%;
+    }
+
+    @include responsive(tab-land) {
+      height: 35%;
+      width: 35%;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      right: 45%;
+      bottom: 25%;
+    }
+
+    @include responsive(phone) {
+      font-weight: 200;
+      height: 60%;
+      width: 40%;
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      right: 45%;
+      bottom: 25%;
+      padding: 0.4rem;
+    }
+  }
+}
+
+.about__menu-home:hover {
+  animation: myScale;
+  animation-duration: 1s;
+}
+
+.about__menu-about:hover {
+  animation: myScale;
+  animation-duration: 1s;
+}
+
+.about__menu-contact:hover {
+  animation: myScale;
+  animation-duration: 1s;
+}

@@ -1,0 +1,157 @@
+.contact {
+  height: auto;
+  width: 100vw;
+
+  &__navbar {
+    @include listTypeDecoration;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
+
+    @include responsive(tab-port) {
+      display: none;
+    }
+
+    @include responsive(phone) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    @include listTypeDecoration;
+    display: flex;
+    justify-content: end;
+    margin: 0.3rem;
+    font-family: $font-secondary;
+    color: $color-secondary-dark-o;
+  }
+
+  &__header {
+    color: $color-white;
+    font-family: $font-secondary;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__header:hover {
+    animation: myScale;
+    animation-duration: 3s;
+
+    @include responsive(tab-port) {
+      animation: none;
+    }
+
+    @include responsive(phone) {
+      animation: none;
+    }
+  }
+
+  &__form {
+    height: auto;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    padding: 2rem;
+    background-image: url(../img/contact-bg.jpeg);
+    background-size: 100%;
+    object-fit: cover;
+
+    @include responsive(tab-port) {
+      height: auto;
+      width: auto;
+    }
+    @include responsive(tab-land) {
+      height: auto;
+      width: auto;
+      padding: 0;
+      margin: 0;
+    }
+
+    @include responsive(phone) {
+      height: auto;
+      width: auto;
+      padding: 0;
+    }
+  }
+  &__container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  &__column {
+    display: grid;
+    width: 50%;
+    padding: 0.5rem;
+  }
+
+  &__box {
+    padding: 0.2rem;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 600;
+  }
+
+  &__msg-box {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 600;
+  }
+
+  &__send-btn {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 1rem;
+    padding: 0.2rem;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 600;
+    border: 1px solid $color-white;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    margin: 2rem;
+  }
+}
+
+.contact__menu-home:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+}
+
+.contact__menu-about:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+}
+
+.contact__menu-contact:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+}

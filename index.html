@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Google Font Links-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="nav.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--font awesome link-->
+    <script
+      src="https://kit.fontawesome.com/d47dcf070e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>SASS Assessment Project</title>
+  </head>
+
+  <!----------------------------------------------- HOME PAGE AREA ------>
+  <body>
+    <section id="home">
+      <header class="header">
+        <h2><a href="#home" class="header__logo-text">kranderson</a></h2>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav class="navbar">
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="navbar__menu-container"
+          >
+            <li class="navbar__menu-home">
+              <a class="navbar__menu" href="#home">Home</a>
+            </li>
+            <li class="navbar__menu-about">
+              <a class="navbar__menu" href="#about">About</a>
+            </li>
+            <li class="navbar__menu-contact">
+              <a class="navbar__menu" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="hero">
+        <h1 class="hero__title">
+          kristen anderson
+          <i class="fa-solid fa-angles-down" id="hero-page-arrow-down"></i>
+        </h1>
+        <video class="hero__bg-video" autoplay muted loop>
+          <source src="./video/mymovie.mp4" type="video/mp4" />
+          Your browser is not supported!
+        </video>
+      </main>
+
+      <h1 class="grid__container-title">
+        Projects
+        <i class="fa-solid fa-angles-down" id="hero-page-arrow-down"></i>
+      </h1>
+      <section class="grid__container">
+        <a href="https://girlkaaaay.github.io/MFAboutMe/" target="_blank">
+          <div class="grid__image-wrapper">
+            <img src="./img/logo1.png" alt="logo" /></div
+        ></a>
+        <a href="https://girlkaaaay.github.io/final-project/" target="_blank"
+          ><div class="grid__image-wrapper">
+            <img src="./img/logo2.png" alt="logo with fork and spoon" /></div
+        ></a>
+        <a href="https://girlkaaaay.github.io/w4b-final/" target="_blank"
+          ><div class="grid__image-wrapper">
+            <img src="./img/logo3.png" alt="logo" /></div
+        ></a>
+      </section>
+    </section>
+
+    <!--------------------------------------- ABOUT PAGE AREA ---------->
+
+    <section class="about" id="about">
+      <nav class="about__navbar">
+        <li class="about__menu-contact">
+          <a class="about__menu" href="#home">Home</a>
+        </li>
+        <li class="about__menu-contact">
+          <a class="about__menu" href="#about">About</a>
+        </li>
+        <li class="about__menu-contact">
+          <a class="about__menu" href="#contact">Contact</a>
+        </li>
+      </nav>
+      <h1 class="about__heading">A little bit about kristen</h1>
+
+      <div class="about__container">
+        <img
+          class="about__image"
+          src="./img/kristen.png"
+          alt="photo of kristen"
+        />
+        <div class="about__paragraph">
+          Hello! Kristen Anderson here. I am 28 yeard old, and I'm currently a
+          WordPress Apprentice at Bitwise Industries. Feel free to email me if
+          you want to get in touch and collaborate!
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------- FAQ SECTION ------->
+
+    <section class="faq">
+      <h1 class="faq__title">FAQ</h1>
+
+      <details class="faq__entry">
+        <summary class="faq__question">Lorem ipsum dolor sit amet?</summary>
+        <p class="faq__answer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, in.
+        </p>
+      </details>
+      <details class="faq__entry">
+        <summary class="faq__question">Lorem ipsum dolor sit amet?</summary>
+        <p class="faq__answer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, in.
+        </p>
+      </details>
+      <details class="faq__entry">
+        <summary class="faq__question">Lorem ipsum dolor sit amet?</summary>
+        <p class="faq__answer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, in.
+        </p>
+      </details>
+    </section>
+
+    <!----------------------------------- CONTACT PAGE AREA ------------->
+
+    <section class="contact" id="contact">
+      <nav class="contact__navbar">
+        <li class="contact__menu-contact">
+          <a class="contact__menu" href="#home">Home</a>
+        </li>
+        <li class="contact__menu-contact">
+          <a class="contact__menu" href="#about">About</a>
+        </li>
+        <li class="contact__menu-contact">
+          <a class="contact__menu" href="#contact">Contact</a>
+        </li>
+      </nav>
+
+      <section class="contact__form">
+        <h1 class="contact__header">let's get in touch!</h1>
+        <div class="contact__container">
+          <form action="">
+            <div class="contact__column">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="contact__box"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="contact__box"
+                required
+              />
+            </div>
+            <textarea
+              placeholder="Write your message here"
+              cols="30"
+              rows="10"
+              class="contact__msg-box"
+            ></textarea>
+            <input class="contact__send-btn" type="submit" value="send" />
+          </form>
+        </div>
+      </section>
+      <!-- Google Map-->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.60406109404!2d-119.78796568442066!3d36.73206927923099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809460a5cfdf4b6b%3A0xab092ce50c284a0a!2sBitwise%20Industries!5e0!3m2!1sen!2sus!4v1652132443331!5m2!1sen!2sus"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!---------------------------------------- FOOTER AREA ------------->
+
+    <footer class="footer">
+      <div class="footer__grid-container">
+        <div class="footer__grid-item">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+        <div class="footer__grid-item-2">
+          <h3>
+            <a class="footer__logo-text" href="#home">kranderson</a>
+          </h3>
+          <h5 class="footer__text-follow-me">Follow Me</h5>
+          <div class="footer__media-links">
+            <li class="">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="fa fa-facebook"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="fa fa-twitter"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="fa fa-instagram"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/home"
+                target="_blank"
+                class="fa fa-linkedin"
+              ></a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__grid-item">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

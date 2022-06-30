@@ -1,0 +1,23 @@
+@keyframes slideUp {
+  0% {
+    transform: translateY(6rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-3rem);
+  }
+  100% {
+    transform: translateY(3rem);
+  }
+}
+
+@keyframes myScale {
+  50% {
+    transform: scale(.5, .5);
+  }
+}

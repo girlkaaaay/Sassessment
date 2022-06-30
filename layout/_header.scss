@@ -1,0 +1,123 @@
+.header {
+  margin: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-primary-dark-green;
+
+  /* PRIMARY HEADER */
+  &__logo-text {
+    text-decoration: none;
+    font-family: $font-primary;
+    color: $color-secondary-dark-o;
+
+    @include responsive(phone) {
+      display: flex;
+    }
+  }
+}
+
+.header__logo-text:hover {
+  color: $color-white;
+}
+
+.navbar {
+  @include listTypeDecoration;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+
+  &__menu-container {
+    list-style-type: none;
+    display: flex;
+
+    @include responsive(phone) {
+      position: fixed;
+      z-index: 1000;
+      inset: 0 0 0 30%;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10rem;
+      font-size: 1.5rem;
+      background-color: rgba($color-white, 0.7);
+      transform: translateX(100%);
+    }
+  }
+
+  &__menu {
+    text-decoration: none;
+    color: $color-secondary-dark-o;
+    font-family: $font-secondary;
+    margin: 0.5rem;
+  }
+}
+
+.navbar [data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.navbar__menu-home:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+
+  @include responsive(phone) {
+    animation: none;
+  }
+}
+
+.navbar__menu-about:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+
+  @include responsive(phone) {
+    animation: none;
+  }
+}
+
+.navbar__menu-contact:hover {
+  animation: myScale;
+  animation-duration: 1s;
+
+  @include responsive(tab-port) {
+    animation: none;
+  }
+
+  @include responsive(phone) {
+    animation: none;
+  }
+}
+
+// MOBILE MENU
+
+.mobile-nav-toggle {
+  display: none;
+
+  @include responsive(phone) {
+    display: block;
+    position: absolute;
+    background-image: url(/img/Group.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url(/img/Vector.svg);
+  background-color: transparent;
+  background-size: 2rem;
+}
